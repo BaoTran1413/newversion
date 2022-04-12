@@ -1,0 +1,78 @@
+<div class="left">
+    <h1> Information list </h1>
+             <!-- <div class="input-group"> -->
+                <!-- <label for="name">Name:</label> -->
+            <div class="groups">
+                <button  type="text" > 
+                Name: {{username}}
+                </button>
+                <input type="text" class="form-control" id="name"  [value]="username" [(ngModel)]="username" placeholder="User Name" required/> 
+            </div> 
+            <!-- </div>
+             -->
+            <!-- <div class="input-group"> -->
+                <!-- <label for="mark">Mark:</label> --> 
+            <div class="groups">
+                    <button  type="text" > 
+                        Mark: {{usermark}}
+                    </button>
+                    <input type="text" class="form-control" id="mark"  [value]="usermark" [(ngModel)]="usermark" placeholder="User Name" required/>
+            </div> 
+            <div class="groups">
+                <button  type="text" > 
+                    department: 
+                </button>
+                <select id="temp"  [(ngModel)]="department_name">
+                    <option>   </option>
+                    <option *ngFor="let dep of department" (value)="department_name" > {{dep.dname}}</option>
+                </select> 
+        </div>  
+            
+           
+            
+            <h3> </h3>
+                
+            
+                <br>
+                <button  type="submit" class="btn btn-success"  (click)="submits()"> Create</button>
+                &nbsp;
+                <button  type="text" class="btn btn-success" (click)="reset()">  Reset</button>
+                &nbsp;
+                <button  type="text" class="btn btn-success" (click)="update()">update</button>
+    
+    </div>
+    <div class="right">
+     <h1 text-align="center"> LIST USER </h1>
+                <table class="table table-hover">
+                   <thead>
+                       <tr>  
+                           <th>ID:</th>
+                           <th>UserName:</th>
+                           <th>UserMark:</th>
+                           <th> Temp </th>
+                           <th> Action </th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr *ngFor="let i of user">
+                           <td> <h3> {{i.id}}</h3> </td>
+                           <td> <h3> {{i.name}}</h3> </td>
+                           <td> <h3> {{i.mark}} </h3> </td> 
+                           <td> <p> {{i.department}}</p></td>
+                            <td> 
+                                <!-- (click)="edit(i.id)" -->
+                               <button  type="text" class="btn btn-success" (click)="edit(i.id)">
+                                   edit
+                               </button>
+                               &nbsp;
+                               <!-- (click)="delete(i.id)" -->
+                               <button  type="text" class="btn btn-success" (click)="delete(i.id)">
+                                   delete
+                               </button>
+                              
+                              
+                           </td>
+                       </tr>
+                   </tbody>
+               </table>
+    </div>

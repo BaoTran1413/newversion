@@ -1,0 +1,60 @@
+<div class="left">
+    <h1> Department</h1>
+        
+        <div class="groups">
+            <!-- <label for="name">Name:</label> -->
+            <button  type="text" >  
+                Name: {{department_name}}
+            </button>
+            <br>
+            <input type="text" class="form-control" id="name"  [value]="department_name" [(ngModel)]="department_name" required/> 
+        
+        </div>
+    
+        <div class="groups">
+            <!-- <label for="mark">Mark:</label> -->
+            <button  type="text"   >
+                Description: {{department_description}}
+            </button>
+            <br>
+            <input type="text" class="form-control" id="mark"  [value]="department_description" [(ngModel)]="department_description" required/>
+            
+        </div>   
+        <!-- (click)="create()" -->
+        <button type="text" class="btn btn-success" (click)="create()"> Create </button>
+        &nbsp;
+        <!-- (click)="reset()" -->
+        <button type="text" class="btn btn-success" (click)="reset()"> Reset </button>
+        &nbsp;
+        <!-- (click)="update()" -->
+        <button type="text" class="btn btn-success" (click)="update()"> Update </button> 
+    </div>
+    <div class="right">
+    <h1> List Department details</h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Mã Phòng Ban </th>
+                    <th>Tên Phòng Ban </th>
+                    <th> thông tin  </th>
+                    <!-- <th> Temp </th> -->
+                    <th> Action </th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dep of departments"> 
+                    <td> <p>{{dep.id}} </p> </td>
+                    <td> <p>{{dep.dname}} </p> </td>
+                    <td> <p>{{dep.description}} </p> </td>
+                    <!-- <td> <p> {{dep.dtemp}}</p></td> -->
+                    <td>  
+                        <button  type="text" class="btn btn-success" (click)="delete(dep.id)"> delete </button>
+                        &nbsp;
+                        <button  type="text" class="btn btn-success" (click)="edit(dep.id)"> Edit </button>
+                       
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

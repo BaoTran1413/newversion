@@ -1,0 +1,73 @@
+/* left */
+.left{
+    height:100%;
+    width:30%;
+    float:left;
+    
+}
+.left h1{
+    text-align:center;
+}
+.left .groups button{
+    font-size:25px;
+    height:50px;
+    background-color:#1a604f;
+    color:#da6e4b;
+    border-radius:15px;
+
+}
+.left .groups input{
+    height:45px;
+    width:100%;
+    font-size:25px;
+    background-color: #1a604f;
+    border-radius:15px;
+
+}
+.left button{
+    font-size:25px;
+    height:50px;
+    background-color:#1a604f;
+    color:#da6e4b;
+    border-radius:15px;
+
+}
+.left .groups select{
+    font-size:25px;
+    height:50px;
+    background-color:#1a604f;
+    color:#da6e4b;
+    border-radius:15px;
+}
+
+/* right */
+.right{
+    height:100%;
+    width:69%;
+    float:right;
+    
+}
+.right table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius:15px;
+
+  }
+.right th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size:25px;
+   
+
+  }
+.right td button{
+    font-size:25px;
+    height:40px;
+    background-color:#1a604f;
+    color:#da6e4b;
+    border-radius:15px;
+
+}
+.right tr:hover {background-color: coral;
+    color:black;}
